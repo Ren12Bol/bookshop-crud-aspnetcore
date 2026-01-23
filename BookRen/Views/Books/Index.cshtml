@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BookRen.Models.Book>;
+
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<p>
+    <a asp-action="Create">Add A New Book.</a>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.ReleaseDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(bookItem => book.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(bookItem => book.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(bookItem => book.Publisher)
+            </td>
+            <td>
+                @Html.DisplayFor(bookItem => book.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(bookItem => book.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(bookItem => book.ReleaseDate)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@book.Id">Details</a>
+                <a asp-action="Edit" asp-route-id="@book.Id">Edit</a>
+                <a asp-action="Delete" asp-route-id="@book.Id">Delete</a>
+
+            </td>
+        </tr>
+        }
+
+        @if (!Model.Any()) {
+        <tr>
+            Nothin is found.
+        </tr> 
+        }
+
+    </tbody>
+</table>

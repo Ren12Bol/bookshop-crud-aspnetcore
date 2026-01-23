@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\data\\bookrencontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\data\\bookrencontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +39,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Program.cs",
-              "RelativeDocumentMoniker": "BookRen\\Program.cs",
-              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Program.cs",
-              "RelativeToolTip": "BookRen\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T16:38:12.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\appsettings.json",
-              "RelativeDocumentMoniker": "BookRen\\appsettings.json",
-              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\appsettings.json",
-              "RelativeToolTip": "BookRen\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-22T16:36:21.006Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BookRen\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BookRen\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T16:41:25.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BookRenContext.cs",
-              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Data\\BookRenContext.cs",
-              "RelativeDocumentMoniker": "BookRen\\Data\\BookRenContext.cs",
-              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Data\\BookRenContext.cs",
-              "RelativeToolTip": "BookRen\\Data\\BookRenContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Program.cs",
+              "RelativeDocumentMoniker": "BookRen\\Program.cs",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Program.cs",
+              "RelativeToolTip": "BookRen\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T16:26:45.15Z",
+              "WhenOpened": "2026-01-23T16:29:39.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\SeedData.cs",
+              "RelativeDocumentMoniker": "BookRen\\Models\\SeedData.cs",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\SeedData.cs",
+              "RelativeToolTip": "BookRen\\Models\\SeedData.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwCsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T16:27:26.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "BookRen\\Views\\Books\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "BookRen\\Views\\Books\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T15:55:29.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "BookRen\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "BookRen\\Controllers\\BooksController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwC8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T15:11:50.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\Book.cs",
               "RelativeDocumentMoniker": "BookRen\\Models\\Book.cs",
               "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\Book.cs",
               "RelativeToolTip": "BookRen\\Models\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T16:19:25.649Z",
               "EditorCaption": ""
