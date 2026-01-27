@@ -1,0 +1,72 @@
+﻿@model BookRen.Models.Book;
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly"></div>
+        
+        <div>
+            <label asp-for="Title"></label>
+            <br />
+            <input asp-for="Title" class="input-box"/>
+            <span asp-validation-for="Title"></span>
+        </div>
+
+        <div>
+            <label asp-for="Author"></label>
+            <br />
+            <input asp-for="Author" class="input-box" />
+            <span asp-validation-for="Author"></span>
+        </div>
+
+        <div>
+            <label asp-for="Publisher"></label>
+            <br />
+            <input asp-for="Publisher" class="input-box" />
+            <span asp-validation-for="Publisher"></span>
+        </div>
+
+        <div>
+            <label asp-for="Description"></label>
+            <br />
+            <textarea asp-for="Description" class="input-box"></textarea>
+            <span asp-validation-for="Description"></span>
+        </div>
+
+        <div>
+            <label asp-for="Genre"></label>
+            <br />
+            <input asp-for="Genre" class="input-box" />
+            <span asp-validation-for="Genre"></span>
+        </div>
+
+        <div>
+            <label asp-for="ReleaseDate"></label>
+            <br />
+            <input asp-for="ReleaseDate" class="input-box" />
+            <span asp-validation-for="ReleaseDate"></span>
+        </div>
+
+        <div>
+            <input type="submit" value="Create" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index">Back to the list</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

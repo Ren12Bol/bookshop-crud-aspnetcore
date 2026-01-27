@@ -20,3 +20,16 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+table, tr, td {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    padding-right:1%;
+}
+
+.input-box {
+    width: 40%;
+}

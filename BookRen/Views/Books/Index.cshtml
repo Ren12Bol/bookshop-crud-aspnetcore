@@ -23,9 +23,6 @@
                 @Html.DisplayNameFor(m => m.Publisher)
             </th>
             <th>
-                @Html.DisplayNameFor(m => m.Description)
-            </th>
-            <th>
                 @Html.DisplayNameFor(m => m.Genre)
             </th>
             <th>
@@ -46,13 +43,10 @@
                 @Html.DisplayFor(bookItem => book.Publisher)
             </td>
             <td>
-                @Html.DisplayFor(bookItem => book.Description)
-            </td>
-            <td>
                 @Html.DisplayFor(bookItem => book.Genre)
             </td>
             <td>
-                @Html.DisplayFor(bookItem => book.ReleaseDate)
+                @Html.DisplayFor(bookItem => book.ReleaseDate.Year)
             </td>
             <td>
                 <a asp-action="Details" asp-route-id="@book.Id">Details</a>
