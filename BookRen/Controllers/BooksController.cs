@@ -15,7 +15,7 @@ namespace BookRen.Controllers
         }
 
         //GET: Books
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
             if (_context.Book == null)
             {
@@ -23,6 +23,12 @@ namespace BookRen.Controllers
             }
 
             var books = from b in _context.Book select b;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(
+                    x => x.Title!.ToUpper().Contains(searchString.ToUpper()));
+            }
 
             return View(await books.ToListAsync());
         }

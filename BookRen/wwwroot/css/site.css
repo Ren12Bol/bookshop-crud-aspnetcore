@@ -33,3 +33,12 @@ td {
 .input-box {
     width: 40%;
 }
+
+.navbar-search {
+    margin: 0 35% 0 0;
+    width: 100%;
+}
+
+.input-box-search {
+    width: 70%;
+}

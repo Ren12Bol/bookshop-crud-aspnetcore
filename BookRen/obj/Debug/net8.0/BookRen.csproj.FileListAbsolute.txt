@@ -252,3 +252,4 @@ C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\runti
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.csproj.AssemblyReference.cache
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.csproj.Up2Date
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.sourcelink.json
