@@ -1,6 +1,8 @@
 using BookRen.Data;
 using BookRen.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,10 @@ var conString = builder.Configuration.GetConnectionString("BookRenContext")
     ?? throw new InvalidOperationException("Connection string 'BookRenContext' not found!");
 builder.Services.AddDbContext<BookRenContext>(options 
     => options.UseSqlServer(conString));
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie();
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
@@ -34,6 +40,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

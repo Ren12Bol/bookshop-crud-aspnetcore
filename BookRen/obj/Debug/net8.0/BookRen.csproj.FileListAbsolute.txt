@@ -253,3 +253,6 @@ C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookR
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.csproj.Up2Date
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.sourcelink.json
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.MvcApplicationPartsAssemblyInfo.cs

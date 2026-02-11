@@ -1,0 +1,35 @@
+﻿@model BookRen.Controllers.AccountController.UserDummy;
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<div>
+    <form asp-action="Login">
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <div>
+            <label>Email:</label>
+            <input asp-for="Email" class="input-box" />
+            <span asp-validation-for="Email"></span>
+        </div>
+
+        <div>
+            <label>Password:</label>
+            <input asp-for="Password" class="input-box"/>
+            <span asp-validation-for="Password"></span>
+        </div>
+
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

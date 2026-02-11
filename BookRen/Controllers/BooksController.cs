@@ -2,9 +2,12 @@
 using BookRen.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
 
 namespace BookRen.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class BooksController : Controller 
     {
         private readonly BookRenContext _context;

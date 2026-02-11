@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookRen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0943e0f12187ee0dca581acf9a0de946f6e95b17")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7506e1fb342bc21370dc17e936d7af56f35482c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookRen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookRen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
