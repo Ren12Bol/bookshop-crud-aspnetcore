@@ -38,6 +38,24 @@
                     <input type="submit" value="Search"/>
                 </form>
             </div>
+
+            <div class="login-box">
+                @if(Context.User.Identity.IsAuthenticated)
+                {
+                    <label id="username-nav">@Context.User.Identity.Name</label>
+
+                    <form asp-controller="Account" asp-action="Logout">
+                        <input class="logout-button"
+                            onclick="return confirm('Are you sure you want to log out?')"
+                            type="submit" value="Logout" />
+                    </form>
+
+                } 
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login">Login</a>
+                }
+            </div>
         </nav>
 
     </header>

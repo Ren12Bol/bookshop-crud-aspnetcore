@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 
 namespace BookRen.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    
     public class BooksController : Controller 
     {
         private readonly BookRenContext _context;
@@ -54,12 +54,14 @@ namespace BookRen.Controllers
         }
 
         //GET: Book/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
 
         //POST: Book/Create
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(
@@ -76,6 +78,7 @@ namespace BookRen.Controllers
         }
 
         //GET: Book/Edit/id
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -94,6 +97,7 @@ namespace BookRen.Controllers
         }
 
         //POST: Book/Edit/id
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, 
             [Bind("Id,Title,Description,Author,Publisher,ReleaseDate,Genre")] Book book)
@@ -122,6 +126,7 @@ namespace BookRen.Controllers
         }
 
         //GET: Book/Delete/id
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -140,6 +145,7 @@ namespace BookRen.Controllers
         }
 
         //POST: Book/Delete/id
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteDone(int id)
         {

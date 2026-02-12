@@ -61,6 +61,16 @@ namespace BookRen.Controllers
             return View(userDummy);
         }
 
+        //POST: /Account/Logout
+        [HttpPost]
+        public async Task<IActionResult> Logout(string? returnUrl)
+        {
+            await HttpContext.SignOutAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return Redirect(returnUrl??"/");
+        }
+
         public class UserDummy
         {
             public string? Email { get; set; }
