@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "BookRen\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "BookRen\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAADwvzIAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-12T18:08:24.145Z",
+              "WhenOpened": "2026-02-13T18:52:45.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "BookRen\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "BookRen\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T18:09:10.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "BookRen\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "BookRen\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAcwB4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T16:52:07.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "BookRen\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "BookRen\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwH8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T16:49:53.953Z",
               "EditorCaption": ""
             }
           ]

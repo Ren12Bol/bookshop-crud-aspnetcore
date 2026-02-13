@@ -1,13 +1,13 @@
 ﻿@model BookRen.Models.User;
 
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Register";
 }
 
-<h1>Login</h1>
+<h1>Register</h1>
 
 <div>
-    <form asp-action="Login">
+    <form asp-action="Register">
         <div asp-validation-summary="ModelOnly"></div>
 
         <div>
@@ -16,23 +16,19 @@
             <input asp-for="Email" class="input-box" />
             <span asp-validation-for="Email"></span>
         </div>
-
+            <label>Username:</label>
+            <br />
+            <input asp-for="Username" class="input-box" />
+            <span asp-validation-for="Username"></span>
         <div>
             <label>Password:</label>
             <br />
-            <input asp-for="Password" type="password" class="input-box"/>
+            <input asp-for="Password" type="password" class="input-box" />
             <span asp-validation-for="Password"></span>
         </div>
 
         <div>
-            <br />
-            <input type="submit" value="Login" />
+            <input type="submit" value="Register"/>
         </div>
     </form>
 </div>
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}

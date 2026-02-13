@@ -12,5 +12,6 @@ namespace BookRen.Data
         }
 
         public DbSet<Book> Book { get; set; } = default!;
+        public DbSet<User> User { get; set; } = default!;
     }
 }
