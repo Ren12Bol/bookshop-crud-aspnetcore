@@ -12,6 +12,8 @@ namespace BookRen.Controllers
 {
     public class AccountController : Controller
     {
+        private PasswordHasher<User> passwordHasher = new PasswordHasher<User>();
+
         private readonly BookRenContext _context;
 
         public AccountController(BookRenContext context)
@@ -46,8 +48,6 @@ namespace BookRen.Controllers
                     ModelState.AddModelError(string.Empty, "Email not found.");
                     return View();
                 }
-
-                PasswordHasher<User> passwordHasher = new PasswordHasher<User>();
 
                 if (passwordHasher.VerifyHashedPassword(user, retrievedUser.Password, user.Password) == 0)
                 {
@@ -107,6 +107,8 @@ namespace BookRen.Controllers
         [HttpPost]
         public async Task<IActionResult> Register([Bind("Id,Email,Username,Password")]User user, string password)
         {
+            var userEmails = from u in _context.User select u.Email;
+
             if (user is null || user.Email is null || 
                 user.Username is null)
             {
@@ -114,9 +116,14 @@ namespace BookRen.Controllers
                 return View();
             }
 
+            if (user.Email == userEmails.FirstOrDefault(u => u.ToUpper() == user.Email.ToUpper()))
+            {
+                ModelState.AddModelError(string.Empty, "A user with that email already exists.");
+                return View();
+            }
+
             if (ModelState.IsValid)
             {
-                PasswordHasher<User> passwordHasher = new PasswordHasher<User>();
                 string hashedPassword = passwordHasher.HashPassword(user, password);
                 user.Role = "User";
                 user.Password = hashedPassword;
