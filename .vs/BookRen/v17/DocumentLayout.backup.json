@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\BooksController.cs",
-              "RelativeDocumentMoniker": "BookRen\\Controllers\\BooksController.cs",
-              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\BooksController.cs",
-              "RelativeToolTip": "BookRen\\Controllers\\BooksController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T18:13:07.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "BookRen\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "BookRen\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAowG4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T18:12:47.513Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

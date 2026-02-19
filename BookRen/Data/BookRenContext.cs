@@ -13,5 +13,7 @@ namespace BookRen.Data
 
         public DbSet<Book> Book { get; set; } = default!;
         public DbSet<User> User { get; set; } = default!;
+        public DbSet<CartItem> CartItem { get; set; }
+        public DbSet<Cart> Cart { get; set; }
     }
 }
