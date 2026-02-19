@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BookRen.Models.CartItem>;
+
+@{
+    ViewData["Title"] = "Your cart";
+}
+
+<h1>Your cart</h1>
+
+<div>
+    <input type="checkbox" name="Select all"/>
+
+    <input type="button" value="Delete selected ones"/>
+</div>
+@{
+    if (Model is not null)
+    {
+        foreach (var item in Model)
+        {
+            <div>
+                <label>@item.Book.Title</label>
+                <label>@item.Book.Author</label>
+            </div>
+
+            <div>
+                <input type="button" value="-" />
+                <label>@item.Quantity</label>
+                <input type="button" value="+" />
+                <label>Price</label>
+            </div>
+
+            <div>
+                <input type="button" value="Remove from Cart" />
+            </div>
+        }
+    }
+}
+<div>

@@ -255,3 +255,4 @@ C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookR
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -55,9 +55,13 @@
                 <a asp-action="Details" asp-route-id="@book.Id">Details</a>
                 @if (User.IsInRole("Admin"))
                     {
+                        <br />
                         <a asp-action="Edit" asp-route-id="@book.Id">Edit</a>
+                        <br />
                         <a asp-action="Delete" asp-route-id="@book.Id">Delete</a>
                     }
+                <br />
+                <a asp-action="" asp-route-id="">Add to Cart</a>
             </td>
         </tr>
         }

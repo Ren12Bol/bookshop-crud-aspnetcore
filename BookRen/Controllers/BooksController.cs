@@ -17,7 +17,7 @@ namespace BookRen.Controllers
             _context = context;
         }
 
-        //GET: Books
+        //GET: Book/
         public async Task<IActionResult> Index(string searchString)
         {
             if (_context.Book == null)
