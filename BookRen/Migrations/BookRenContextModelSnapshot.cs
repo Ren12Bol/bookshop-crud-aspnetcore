@@ -50,7 +50,7 @@ namespace BookRen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Book");
+                    b.ToTable("Book", (string)null);
                 });
 
             modelBuilder.Entity("BookRen.Models.Cart", b =>
@@ -63,7 +63,7 @@ namespace BookRen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cart");
+                    b.ToTable("Cart", (string)null);
                 });
 
             modelBuilder.Entity("BookRen.Models.CartItem", b =>
@@ -89,7 +89,7 @@ namespace BookRen.Migrations
 
                     b.HasIndex("CartId");
 
-                    b.ToTable("CartItem");
+                    b.ToTable("CartItem", (string)null);
                 });
 
             modelBuilder.Entity("BookRen.Models.User", b =>
@@ -116,7 +116,7 @@ namespace BookRen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("BookRen.Models.CartItem", b =>

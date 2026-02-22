@@ -1,9 +1,10 @@
 ﻿using BookRen.Data;
 using BookRen.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication;
 
 namespace BookRen.Controllers
 {
@@ -19,6 +20,12 @@ namespace BookRen.Controllers
         public IActionResult UserCart()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddItem(string? returnUrl)
+        {
+            return Redirect(returnUrl ?? "/");
         }
     }
 }

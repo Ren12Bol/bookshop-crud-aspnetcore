@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var currentUrl = Url.RouteUrl(ViewContext.RouteData.Values);
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -51,6 +55,7 @@
                         <input class="logout-button"
                             onclick="return confirm('Are you sure you want to log out?')"
                             type="submit" value="Logout" />
+                        <input type="hidden" name="returnUrl" value="@currentUrl" />
                     </form>
 
                 } 
