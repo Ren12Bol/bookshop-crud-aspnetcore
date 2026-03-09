@@ -60,7 +60,8 @@ namespace BookRen.Controllers
                     {
                         new Claim(ClaimTypes.Email, retrievedUser.Email),
                         new Claim(ClaimTypes.Name, retrievedUser.Username),
-                        new Claim(ClaimTypes.Role, retrievedUser.Role)
+                        new Claim(ClaimTypes.Role, retrievedUser.Role),
+                        new Claim(ClaimTypes.NameIdentifier, retrievedUser.Id.ToString())
                     };
 
                     var claimsIdentity = new ClaimsIdentity(

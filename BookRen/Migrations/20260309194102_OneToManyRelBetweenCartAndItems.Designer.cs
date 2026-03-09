@@ -4,6 +4,7 @@ using BookRen.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookRen.Migrations
 {
     [DbContext(typeof(BookRenContext))]
-    partial class BookRenContextModelSnapshot : ModelSnapshot
+    [Migration("20260309194102_OneToManyRelBetweenCartAndItems")]
+    partial class OneToManyRelBetweenCartAndItems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +53,7 @@ namespace BookRen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Book", (string)null);
+                    b.ToTable("Book");
                 });
 
             modelBuilder.Entity("BookRen.Models.Cart", b =>
@@ -68,7 +71,7 @@ namespace BookRen.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Cart", (string)null);
+                    b.ToTable("Cart");
                 });
 
             modelBuilder.Entity("BookRen.Models.CartItem", b =>
@@ -94,7 +97,7 @@ namespace BookRen.Migrations
 
                     b.HasIndex("CartId");
 
-                    b.ToTable("CartItem", (string)null);
+                    b.ToTable("CartItem");
                 });
 
             modelBuilder.Entity("BookRen.Models.User", b =>
@@ -121,7 +124,7 @@ namespace BookRen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User", (string)null);
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("BookRen.Models.Cart", b =>

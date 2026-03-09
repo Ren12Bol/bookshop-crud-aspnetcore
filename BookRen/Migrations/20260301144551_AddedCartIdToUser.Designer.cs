@@ -4,6 +4,7 @@ using BookRen.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookRen.Migrations
 {
     [DbContext(typeof(BookRenContext))]
-    partial class BookRenContextModelSnapshot : ModelSnapshot
+    [Migration("20260301144551_AddedCartIdToUser")]
+    partial class AddedCartIdToUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +53,7 @@ namespace BookRen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Book", (string)null);
+                    b.ToTable("Book");
                 });
 
             modelBuilder.Entity("BookRen.Models.Cart", b =>
@@ -61,14 +64,9 @@ namespace BookRen.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Cart", (string)null);
+                    b.ToTable("Cart");
                 });
 
             modelBuilder.Entity("BookRen.Models.CartItem", b =>
@@ -82,7 +80,7 @@ namespace BookRen.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CartId")
+                    b.Property<int?>("CartId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -94,7 +92,7 @@ namespace BookRen.Migrations
 
                     b.HasIndex("CartId");
 
-                    b.ToTable("CartItem", (string)null);
+                    b.ToTable("CartItem");
                 });
 
             modelBuilder.Entity("BookRen.Models.User", b =>
@@ -104,6 +102,9 @@ namespace BookRen.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CartId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -121,18 +122,7 @@ namespace BookRen.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User", (string)null);
-                });
-
-            modelBuilder.Entity("BookRen.Models.Cart", b =>
-                {
-                    b.HasOne("BookRen.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("BookRen.Models.CartItem", b =>
@@ -143,15 +133,11 @@ namespace BookRen.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BookRen.Models.Cart", "Cart")
+                    b.HasOne("BookRen.Models.Cart", null)
                         .WithMany("Items")
-                        .HasForeignKey("CartId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CartId");
 
                     b.Navigation("Book");
-
-                    b.Navigation("Cart");
                 });
 
             modelBuilder.Entity("BookRen.Models.Cart", b =>

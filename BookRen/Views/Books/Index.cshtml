@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Books";
-    var currentId = @Url.RouteUrl(ViewContext.RouteData.Values);
+    var currentUrl = @Url.RouteUrl(ViewContext.RouteData.Values);
 }
 
 <h1>Books</h1>
@@ -64,9 +64,9 @@
                 <br />
             </td>
             <td>
-                <form asp-controller="Cart" asp-action="AddItem">
-                        <input type="hidden" name="returnUrl" value="@currentId" />
-                        <input type="submit" value="Add to Cart" />
+                <form asp-controller="Cart" asp-action="AddItem" asp-route-id="@book.Id">
+                    <input type="hidden" name="returnUrl" value="@currentUrl" />
+                    <input onclick="alert('Book is added to your cart!')" type="submit" value="Add to Cart" />
                 </form>
             </td>
         </tr>

@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\views\\cart\\usercart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\views\\cart\\usercart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|c:\\users\\rabot\\desktop\\vs studio projects\\bookren\\bookren\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1FD817C-8E6C-4DA5-9CE8-676F2EDC5AE0}|BookRen\\BookRen.csproj|solutionrelative:bookren\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "BookRen\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\Cart.cs",
+              "RelativeToolTip": "BookRen\\Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T20:31:04.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "BookRen\\Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Models\\CartItem.cs",
+              "RelativeToolTip": "BookRen\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T19:53:57.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserCart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Cart\\UserCart.cshtml",
+              "RelativeDocumentMoniker": "BookRen\\Views\\Cart\\UserCart.cshtml",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Cart\\UserCart.cshtml",
+              "RelativeToolTip": "BookRen\\Views\\Cart\\UserCart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-09T19:48:36.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "BookRen\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\CartController.cs",
+              "RelativeToolTip": "BookRen\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA2wB4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T14:31:17.654Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
