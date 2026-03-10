@@ -20,15 +20,21 @@ namespace BookRen.Controllers
 
         public IActionResult UserCart()
         {
-            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
-            var user = _context.User.FirstOrDefault(x => x.Id == int.Parse(userId));
+            if (User.Identity.IsAuthenticated)
+            {
+                var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+                var user = _context.User.FirstOrDefault(x => x.Id == int.Parse(userId));
 
-            var cart = _context.Cart.FirstOrDefault(x => x.User == user);
+                var cart = _context.Cart.FirstOrDefault(x => x.User == user);
 
-            var cartItems = _context.CartItem.Where(c => c.Cart == cart)
-                .Include(c => c.Book);
+                var cartItems = _context.CartItem.Where(c => c.Cart == cart)
+                    .Include(c => c.Book);
 
-            return View(cartItems);
+                return View(cartItems);
+            }
+
+            return View();
+            
         }
 
         [HttpPost]
@@ -83,6 +89,24 @@ namespace BookRen.Controllers
                 }
 
                 await _context.SaveChangesAsync();
+            }
+
+            return Redirect(returnUrl ?? "/");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveItem(string? returnUrl, int id)
+        {
+            var cartItem = _context.CartItem.FirstOrDefault(x => x.Id == id);
+
+            if (cartItem is not null)
+            {
+                _context.CartItem.Remove(cartItem);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                return Problem("No such item in the cart!");
             }
 
             return Redirect(returnUrl ?? "/");
