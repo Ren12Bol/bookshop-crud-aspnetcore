@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Your cart";
     var currentUrl = @Url.RouteUrl(ViewContext.RouteData.Values);
+    int numberBtn = 0;
 }
 
 <h1>Your cart</h1>
@@ -17,15 +18,20 @@
     {
         foreach (var item in Model)
         {
+            numberBtn += 1;
+
             <div>
                 <label>@item.Book.Title</label>
                 <label>@item.Book.Author</label>
             </div>
 
             <div>
-                <input type="button" value="-" />
-                <label>@item.Quantity</label>
-                <input type="button" value="+" />
+                <form asp-controller="Cart" asp-action="UpdateItemQuantity" asp-route-id="@item.Id">
+                    <input type="number" value="@item.Quantity" 
+                    onchange="makeUpdateQntBtnVisible(@numberBtn.ToString())" min="1"/>
+                    <input type="submit" value="Update quantity" class="quantity-update" id="qnt-update-@numberBtn.ToString()" />
+                </form>
+                <br />
                 <label>Price</label>
             </div>
 

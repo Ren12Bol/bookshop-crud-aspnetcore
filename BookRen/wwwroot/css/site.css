@@ -59,3 +59,7 @@ td {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.quantity-update {
+    display: none;
+}
