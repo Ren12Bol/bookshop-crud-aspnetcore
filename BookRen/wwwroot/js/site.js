@@ -43,3 +43,16 @@ function showSelectAllBtn() {
         }
     }
 }
+
+function selectItems() {
+    let selectedItemsIds = document.getElementsByClassName("selected-item");
+    let idsArr = '';
+
+    for (var i = 0; i < selectedItemsIds.length; i++) {
+        if (selectedItemsIds[i].checked == true) {
+            idsArr += ',' + selectedItemsIds[i].value;
+        }
+    }
+
+    document.getElementById("selected-ids").value = idsArr;
+}

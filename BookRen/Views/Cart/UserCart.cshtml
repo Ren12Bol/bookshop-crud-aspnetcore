@@ -22,7 +22,7 @@
             numberItem += 1;
             
             <div>
-                <input type="checkbox" name="selectOne" onclick="toggle(this)" />
+                <input type="checkbox" class="selected-item" value="@item.Id" onclick="toggle(this)" />
                 <div>
                     <label>@item.Book.Title</label>
                     <label>@item.Book.Author</label>
@@ -46,7 +46,10 @@
                 <br />
             </div>
         }
-
-        <input type="submit" value="Delete selected ones" id="delete-all-btn" />
+        <form asp-controller="Cart" asp-action="RemoveSelectedItems">
+            <input type="hidden" name="returnUrl" value="@currentUrl" />
+            <input type="hidden" name="ids" value="" id="selected-ids"/>
+            <input type="submit" value="Delete selected ones" id="delete-all-btn" onclick="selectItems()" />
+        </form>
     }
 }

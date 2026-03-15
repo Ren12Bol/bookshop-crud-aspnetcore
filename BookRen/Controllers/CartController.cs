@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Text.Json.Nodes;
 
 namespace BookRen.Controllers
 {
@@ -97,19 +98,49 @@ namespace BookRen.Controllers
         [HttpPost]
         public async Task<IActionResult> RemoveItem(string? returnUrl, int id)
         {
+            try
+            {
+                removeAnItem(id);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                return Problem("Something went wrong!");
+            }
+
+            return Redirect(returnUrl ?? "/");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveSelectedItems(string? returnUrl, string ids)
+        {
+            string[] itemIds = ids.Split(',').Skip(1).ToArray();
+
+            foreach (var item in itemIds)
+            {
+                try
+                {
+                    removeAnItem(int.Parse(item));
+                    await _context.SaveChangesAsync();
+                }
+                catch (Exception)
+                {
+                    return Problem("Something went wrong!");
+                }
+            }
+
+
+            return Redirect(returnUrl ?? "/");
+        }
+
+        public void removeAnItem(int id)
+        {
             var cartItem = _context.CartItem.FirstOrDefault(x => x.Id == id);
 
             if (cartItem is not null)
             {
                 _context.CartItem.Remove(cartItem);
-                await _context.SaveChangesAsync();
             }
-            else
-            {
-                return Problem("No such item in the cart!");
-            }
-
-            return Redirect(returnUrl ?? "/");
         }
     }
 }
