@@ -63,3 +63,7 @@ td {
 .quantity-update {
     display: none;
 }
+
+#delete-all-btn {
+    display: none;
+}
