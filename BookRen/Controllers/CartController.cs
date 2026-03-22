@@ -33,8 +33,14 @@ namespace BookRen.Controllers
 
                 return View(cartItems);
             }
+            else
+            {
+                //localstorage-based cart logic
 
-            return View();
+
+            }
+
+                return View();
             
         }
 
@@ -129,6 +135,21 @@ namespace BookRen.Controllers
                 }
             }
 
+
+            return Redirect(returnUrl ?? "/");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateItemQuantity(string? returnUrl, int id, int qntNum)
+        {
+            var cartItem = _context.CartItem.FirstOrDefault(x => x.Id == id);
+
+            if (cartItem is not null)
+            {
+                cartItem.Quantity = qntNum;
+                _context.Update(cartItem);
+                await _context.SaveChangesAsync();
+            }
 
             return Redirect(returnUrl ?? "/");
         }

@@ -34,8 +34,7 @@
               "RelativeToolTip": "BookRen\\wwwroot\\css\\site.css",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAEMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-11T15:58:15.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-11T15:58:15.775Z"
             },
             {
               "$type": "Document",
@@ -45,7 +44,7 @@
               "RelativeDocumentMoniker": "BookRen\\Views\\Cart\\UserCart.cshtml",
               "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Views\\Cart\\UserCart.cshtml",
               "RelativeToolTip": "BookRen\\Views\\Cart\\UserCart.cshtml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAYwBcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwCwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-03-11T16:32:41.302Z",
               "EditorCaption": ""
@@ -58,7 +57,7 @@
               "RelativeDocumentMoniker": "BookRen\\Controllers\\CartController.cs",
               "ToolTip": "C:\\Users\\Rabot\\Desktop\\VS Studio projects\\BookRen\\BookRen\\Controllers\\CartController.cs",
               "RelativeToolTip": "BookRen\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAApwIQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-01T14:31:17.654Z",
               "EditorCaption": ""

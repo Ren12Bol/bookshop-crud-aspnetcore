@@ -11,6 +11,13 @@
 <div>
     <input type="checkbox" name="selectAll" onclick="toggle(this)" id="firstCheckbox" />
     <label>Select all</label>
+
+
+    <form asp-controller="Cart" asp-action="RemoveSelectedItems">
+        <input type="hidden" name="returnUrl" value="@currentUrl" />
+        <input type="hidden" name="ids" value="" id="selected-ids" />
+        <input type="submit" value="Delete selected ones" id="delete-all-btn" onclick="selectItems()" />
+    </form>
 </div>
 <br />
 
@@ -24,14 +31,15 @@
             <div>
                 <input type="checkbox" class="selected-item" value="@item.Id" onclick="toggle(this)" />
                 <div>
-                    <label>@item.Book.Title</label>
-                    <label>@item.Book.Author</label>
+                    <label>"@item.Book.Title"</label>
+                    <label>by @item.Book.Author</label>
                 </div>
 
                 <div>
                     <form asp-controller="Cart" asp-action="UpdateItemQuantity" asp-route-id="@item.Id">
-                        <input type="number" value="@item.Quantity"
+                        <input type="number" value="@item.Quantity" name="qntNum"
                                onchange="makeUpdateQntBtnVisible(@numberItem.ToString())" min="1" />
+                        <input type="hidden" name="returnUrl" value="@currentUrl" />
                         <input type="submit" value="Update quantity" class="quantity-update" id="qnt-update-@numberItem.ToString()" />
                     </form>
                     <label>Price</label>
@@ -46,10 +54,5 @@
                 <br />
             </div>
         }
-        <form asp-controller="Cart" asp-action="RemoveSelectedItems">
-            <input type="hidden" name="returnUrl" value="@currentUrl" />
-            <input type="hidden" name="ids" value="" id="selected-ids"/>
-            <input type="submit" value="Delete selected ones" id="delete-all-btn" onclick="selectItems()" />
-        </form>
     }
 }
