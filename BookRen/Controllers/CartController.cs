@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Text.Json;
 using System.Text.Json.Nodes;
 
 namespace BookRen.Controllers
@@ -30,19 +31,12 @@ namespace BookRen.Controllers
 
                 var cartItems = _context.CartItem.Where(c => c.Cart == cart)
                     .Include(c => c.Book);
-
                 return View(cartItems);
             }
-            else
-            {
-                //localstorage-based cart logic
 
-
-            }
-
-                return View();
-            
+            return View();
         }
+
 
         [HttpPost]
         public async Task<IActionResult> AddItem(string? returnUrl, int id)
@@ -54,10 +48,6 @@ namespace BookRen.Controllers
                 return Problem("That book doesn't exist.");
             }
 
-            if (!User.Identity.IsAuthenticated)
-            {
-                //session-based logic
-            }
             else
             {
                 var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
@@ -75,7 +65,7 @@ namespace BookRen.Controllers
                     _context.Cart.Add(cart);
                 } 
                 
-                var cartItem = _context.CartItem.FirstOrDefault(x => x.Book == book);
+                var cartItem = _context.CartItem.FirstOrDefault(x => x.Book == book && x.Cart == cart);
 
                 if (cartItem is null)
                 {

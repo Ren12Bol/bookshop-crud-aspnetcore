@@ -56,3 +56,66 @@ function selectItems() {
 
     document.getElementById("selected-ids").value = idsArr;
 }
+
+
+//local cart storing for unauthorized users
+
+userStorage = window.localStorage;
+
+function createLocalCart() {
+
+    let cart = {};
+
+    cart.items = [];
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function addItemsToLocalCart(id) {
+
+    if (localStorage.getItem("cart") === null) {
+        createLocalCart();
+    }
+
+    let item = {};
+
+    item.Id = Math.random();
+
+    item.Book = id;
+
+    item.Quantity = 1;
+
+    if (localStorage.getItem("cart")) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+
+        cart.Items.push(item);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    alert('Book is added to your cart!');
+}
+
+//getting items from the cart
+
+let localCart = document.getElementById("localCart");
+
+function showItemsFromLocalCart() {
+    if (localStorage.getItem("cart") !== null) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+
+        const url = "/Cart/UserLocalCart/" + new URLSearchParams(cart);
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error ${response.status}`);
+                }
+                return response.text();
+            })
+            .then((data) => {
+                console.log(data);
+            });
+    }
+}
+
+localCart.addEventListener("load", showItemsFromLocalCart);

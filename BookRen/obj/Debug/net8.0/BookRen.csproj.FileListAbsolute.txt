@@ -257,3 +257,6 @@ C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Micro
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\BookRen.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Blazored.LocalStorage.dll
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\Blazored.SessionStorage.dll
+C:\Users\Rabot\Desktop\VS Studio projects\BookRen\BookRen\bin\Debug\net8.0\ProtectedLocalStore.dll

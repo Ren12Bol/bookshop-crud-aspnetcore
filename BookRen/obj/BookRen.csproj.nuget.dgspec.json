@@ -75,6 +75,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.22, )"
+            },
+            "ProtectedBrowserStorage.NETStandard": {
+              "target": "Package",
+              "version": "[1.1.2, )"
             }
           },
           "imports": [

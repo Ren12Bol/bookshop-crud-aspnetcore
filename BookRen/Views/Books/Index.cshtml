@@ -64,10 +64,20 @@
                 <br />
             </td>
             <td>
-                <form asp-controller="Cart" asp-action="AddItem" asp-route-id="@book.Id">
-                    <input type="hidden" name="returnUrl" value="@currentUrl" />
-                    <input onclick="alert('Book is added to your cart!')" type="submit" value="Add to Cart" />
-                </form>
+                @{
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        <form asp-controller="Cart" asp-action="AddItem" asp-route-id="@book.Id">
+                            <input type="hidden" name="returnUrl" value="@currentUrl" />
+                            <input onclick="alert('Book is added to your cart!')" type="submit" value="Add to Cart" />
+                        </form>
+                    }
+                    // else
+                    // {
+                    //     <input onclick="addItemsToLocalCart(@book.Id)" type="submit" value="Add to Cart" />
+                    // }
+                }
+                
             </td>
         </tr>
         }
