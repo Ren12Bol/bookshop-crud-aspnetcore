@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Packaging.Rules;
 using System.Security.Claims;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -33,8 +34,17 @@ namespace BookRen.Controllers
                     .Include(c => c.Book);
                 return View(cartItems);
             }
+            else
+            {
+                if (HttpContext.Session.GetString("CartItems") != null)
+                {
+                    var cartItems = JsonSerializer.Deserialize<List<CartItem>>(HttpContext.Session.GetString("CartItems"));
 
-            return View();
+                    return View(cartItems);
+                }
+            }
+
+                return View();
         }
 
 
@@ -50,42 +60,88 @@ namespace BookRen.Controllers
 
             else
             {
-                var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
-                var user = _context.User.FirstOrDefault(x => x.Id == int.Parse(userId));
-
-                var cart = _context.Cart.FirstOrDefault(x => x.User == user);
-
-                if (cart is null)
+                if (User.Identity.IsAuthenticated)
                 {
-                    cart = new Cart()
+                    var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier)?.Value;
+                    var user = _context.User.FirstOrDefault(x => x.Id == int.Parse(userId));
+
+                    var cart = _context.Cart.FirstOrDefault(x => x.User == user);
+
+                    if (cart is null)
                     {
-                        User = user
-                    };
+                        cart = new Cart()
+                        {
+                            User = user
+                        };
 
-                    _context.Cart.Add(cart);
-                } 
-                
-                var cartItem = _context.CartItem.FirstOrDefault(x => x.Book == book && x.Cart == cart);
+                        _context.Cart.Add(cart);
+                    }
 
-                if (cartItem is null)
-                {
-                    var newItem = new CartItem()
+                    var cartItem = _context.CartItem.FirstOrDefault(x => x.Book == book && x.Cart == cart);
+
+                    if (cartItem is null)
                     {
-                        Book = book,
-                        Quantity = 1,
-                        Cart = cart
-                    };
+                        var newItem = new CartItem()
+                        {
+                            Book = book,
+                            Quantity = 1,
+                            Cart = cart
+                        };
 
-                    cart.Items?.Add(newItem);
-                    _context.CartItem.Add(newItem);
+                        cart.Items?.Add(newItem);
+                        _context.CartItem.Add(newItem);
+                    }
+                    else
+                    {
+                        cartItem.Quantity += 1;
+                        _context.CartItem.Update(cartItem);
+                    }
+
+                    await _context.SaveChangesAsync();
                 }
                 else
                 {
-                    cartItem.Quantity += 1;
-                    _context.CartItem.Update(cartItem);
-                }
+                    var items = new List<CartItem>();
 
-                await _context.SaveChangesAsync();
+                    var item = new CartItem()
+                    {
+                        Id = new Random().Next(1, int.MaxValue),
+                        Book = book,
+                        Quantity = 1
+                    };
+
+                    if (HttpContext.Session.GetString("CartItems") == null)
+                    {
+                        items.Add(item);
+
+                        HttpContext.Session.SetString("CartItems", JsonSerializer.Serialize(items));
+                    }
+                    else
+                    {
+                        items = JsonSerializer.Deserialize<List<CartItem>>(HttpContext.Session.GetString("CartItems"));
+
+                        bool containsBook = false;
+
+                        foreach (var item1 in items)
+                        {
+                            if (item1.Book.Id == item.Book.Id)
+                            {
+                                item1.Quantity += 1;
+
+                                containsBook = true;
+
+                                break;
+                            }
+                        }
+
+                        if (containsBook == false)
+                        {
+                            items.Add(item);
+                        }
+
+                        HttpContext.Session.SetString("CartItems", JsonSerializer.Serialize(items));
+                    }
+                }
             }
 
             return Redirect(returnUrl ?? "/");
@@ -94,29 +150,11 @@ namespace BookRen.Controllers
         [HttpPost]
         public async Task<IActionResult> RemoveItem(string? returnUrl, int id)
         {
-            try
-            {
-                removeAnItem(id);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception)
-            {
-                return Problem("Something went wrong!");
-            }
-
-            return Redirect(returnUrl ?? "/");
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> RemoveSelectedItems(string? returnUrl, string ids)
-        {
-            string[] itemIds = ids.Split(',').Skip(1).ToArray();
-
-            foreach (var item in itemIds)
+            if (User.Identity.IsAuthenticated)
             {
                 try
                 {
-                    removeAnItem(int.Parse(item));
+                    removeAnItem(id);
                     await _context.SaveChangesAsync();
                 }
                 catch (Exception)
@@ -124,7 +162,60 @@ namespace BookRen.Controllers
                     return Problem("Something went wrong!");
                 }
             }
+            else
+            {
+                var cartItems = JsonSerializer.Deserialize<List<CartItem>>(HttpContext.Session.GetString("CartItems"));
 
+                foreach (var item in cartItems)
+                {
+                    if (item.Id == id)
+                    {
+                        cartItems.Remove(item);
+
+                        break;
+                    }
+                }
+
+                HttpContext.Session.SetString("CartItems", JsonSerializer.Serialize(cartItems));
+            }
+
+                return Redirect(returnUrl ?? "/");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveSelectedItems(string? returnUrl, string ids)
+        {
+            string[] itemIds = ids.Split(',').Skip(1).ToArray();
+
+            var cartItems = new List<CartItem>();
+
+            if (HttpContext.Session.GetString("CartItems") != null)
+            {
+                cartItems = JsonSerializer.Deserialize<List<CartItem>>(HttpContext.Session.GetString("CartItems"));
+            }
+
+            foreach (var id in itemIds)
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    try
+                    {
+                        removeAnItem(int.Parse(id));
+                    }
+                    catch (Exception)
+                    {
+                        return Problem("Something went wrong!");
+                    }
+                }
+                else
+                {
+                    cartItems = cartItems.Where(item => item.Id != int.Parse(id)).ToList();
+
+                }
+            }
+
+            await _context.SaveChangesAsync();
+            HttpContext.Session.SetString("CartItems", JsonSerializer.Serialize(cartItems));
 
             return Redirect(returnUrl ?? "/");
         }
@@ -132,16 +223,33 @@ namespace BookRen.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateItemQuantity(string? returnUrl, int id, int qntNum)
         {
-            var cartItem = _context.CartItem.FirstOrDefault(x => x.Id == id);
-
-            if (cartItem is not null)
+            if (User.Identity.IsAuthenticated)
             {
-                cartItem.Quantity = qntNum;
-                _context.Update(cartItem);
-                await _context.SaveChangesAsync();
+                var cartItem = _context.CartItem.FirstOrDefault(x => x.Id == id);
+
+                if (cartItem is not null)
+                {
+                    cartItem.Quantity = qntNum;
+                    _context.Update(cartItem);
+                    await _context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                var cartItems = JsonSerializer.Deserialize<List<CartItem>>(HttpContext.Session.GetString("CartItems"));
+
+                foreach (var item in cartItems)
+                {
+                    if (item.Id == id)
+                    {
+                        item.Quantity = qntNum;
+                    }
+                }
+
+                HttpContext.Session.SetString("CartItems", JsonSerializer.Serialize(cartItems));
             }
 
-            return Redirect(returnUrl ?? "/");
+                return Redirect(returnUrl ?? "/");
         }
 
         public void removeAnItem(int id)

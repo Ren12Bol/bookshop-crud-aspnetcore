@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text.Json;
 
 namespace BookRen.Controllers
 {
@@ -131,6 +132,35 @@ namespace BookRen.Controllers
 
                 _context.Add(user);
                 await _context.SaveChangesAsync();
+            }
+
+            if (HttpContext.Session.GetString("CartItems") != null)
+            {
+                var cartItems = JsonSerializer.Deserialize<List<CartItem>>(HttpContext.Session.GetString("CartItems"));
+
+                var cart = new Cart() { User = user};
+                cart.Items = new List<CartItem>();
+
+                _context.Cart.Add(cart);
+
+                foreach (var item in cartItems)
+                {
+                    var book = _context.Book.FirstOrDefault(x => x.Id == item.Book.Id);
+
+                    var newItem = new CartItem()
+                    {
+                        Book = book,
+                        Quantity = item.Quantity,
+                        Cart = cart
+                    };
+
+                    cart.Items.Add(newItem);
+                    _context.CartItem.Add(newItem);
+                }
+
+                await _context.SaveChangesAsync();
+
+                HttpContext.Session.Clear();
             }
 
             return Redirect("/Account/Login/");
