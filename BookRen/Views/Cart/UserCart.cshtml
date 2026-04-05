@@ -8,19 +8,22 @@
 
 <h1>Your cart</h1>
 
-<div>
-    <input type="checkbox" name="selectAll" onclick="toggle(this)" id="firstCheckbox" />
-    <label>Select all</label>
+@if (Model != null && Model.Count() > 0)
+{
+    <div>
+        <input type="checkbox" name="selectAll" onclick="toggle(this)" id="firstCheckbox" />
+        <label>Select all</label>
 
-    <form asp-controller="Cart" asp-action="RemoveSelectedItems">
-        <input type="hidden" name="returnUrl" value="@currentUrl" />
-        <input type="hidden" name="bookIds" value="" id="selected-book-ids"/>
-        <input type="hidden" name="ids" value="" id="selected-ids" />
-        <input type="submit" value="Delete selected ones" id="delete-all-btn" onclick="selectItems()" />
-    </form>
+        <form asp-controller="Cart" asp-action="RemoveSelectedItems">
+            <input type="hidden" name="returnUrl" value="@currentUrl" />
+            <input type="hidden" name="bookIds" value="" id="selected-book-ids" />
+            <input type="hidden" name="ids" value="" id="selected-ids" />
+            <input type="submit" value="Delete selected ones" id="delete-all-btn" onclick="selectItems()" />
+        </form>
 
-</div>
-<br />
+    </div>
+    <br />
+}
 
 @{
     if (Model is not null)
