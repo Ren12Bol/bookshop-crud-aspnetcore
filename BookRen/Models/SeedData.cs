@@ -27,7 +27,7 @@ namespace BookRen.Models
                         "when the wizard Gandalf visits, accompanied by " +
                         "a group of thirteen dwarves led by Thorin Oakenshield.",
                         Publisher = "George Allen & Unwin",
-                        ReleaseDate = DateTime.Parse("1937-9-23"),
+                        ReleaseDate = new DateOnly(1937, 9, 23),
                         Genre = "Fantasy"
                     },
                     new Book
@@ -38,7 +38,7 @@ namespace BookRen.Models
                         "loneliness, and existential longing through a " +
                         "\"tangled triangle\" of relationships.",
                         Publisher = "Kodansha",
-                        ReleaseDate = DateTime.Parse("1999-01-01"),
+                        ReleaseDate = new DateOnly(1999, 1, 1),
                         Genre = "Contemporary Romance"
                     });
                 context.SaveChanges();

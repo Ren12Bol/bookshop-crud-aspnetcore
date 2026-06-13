@@ -8,7 +8,7 @@ namespace BookRen.Data
         public BookRenContext(DbContextOptions<BookRenContext> options) 
             : base(options)
         {
-
+            
         }
 
         public DbSet<Book> Book { get; set; } = default!;

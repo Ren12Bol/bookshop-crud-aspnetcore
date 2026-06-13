@@ -2,6 +2,7 @@ using BookRen.Data;
 using BookRen.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,7 +14,7 @@ builder.Services.AddControllersWithViews();
 var conString = builder.Configuration.GetConnectionString("BookRenContext")
     ?? throw new InvalidOperationException("Connection string 'BookRenContext' not found!");
 builder.Services.AddDbContext<BookRenContext>(options 
-    => options.UseSqlServer(conString));
+    => options.UseNpgsql(conString));
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie();
