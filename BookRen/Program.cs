@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var conString = builder.Configuration.GetConnectionString("BookRenContext")
+var conString = builder.Configuration.GetConnectionString("DockerConnection")
     ?? throw new InvalidOperationException("Connection string 'BookRenContext' not found!");
 builder.Services.AddDbContext<BookRenContext>(options 
     => options.UseNpgsql(conString));
